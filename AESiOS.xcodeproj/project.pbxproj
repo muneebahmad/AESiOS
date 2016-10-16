@@ -14,6 +14,9 @@
 		C287610A1DB3A5B500AB0953 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C28761091DB3A5B500AB0953 /* Images.xcassets */; };
 		C287610D1DB3A5B500AB0953 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C287610B1DB3A5B500AB0953 /* LaunchScreen.xib */; };
 		C28761191DB3A5B500AB0953 /* AESiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28761181DB3A5B500AB0953 /* AESiOSTests.swift */; };
+		C287615F1DB3ADC600AB0953 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C287615A1DB3ADB100AB0953 /* CryptoSwift.framework */; };
+		C28761601DB3ADCB00AB0953 /* CryptoSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C287615A1DB3ADB100AB0953 /* CryptoSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C28761641DB3BA3900AB0953 /* AES2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28761631DB3BA3900AB0953 /* AES2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,7 +27,42 @@
 			remoteGlobalIDString = C28760F91DB3A5B500AB0953;
 			remoteInfo = AESiOS;
 		};
+		C28761591DB3ADB100AB0953 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C28761531DB3ADB100AB0953 /* CryptoSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 754BE45519693E190098E6F3;
+			remoteInfo = CryptoSwift;
+		};
+		C287615B1DB3ADB100AB0953 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C28761531DB3ADB100AB0953 /* CryptoSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 754BE46019693E190098E6F3;
+			remoteInfo = CryptoSwiftTests;
+		};
+		C287615D1DB3ADBF00AB0953 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C28761531DB3ADB100AB0953 /* CryptoSwift.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 754BE45419693E190098E6F3;
+			remoteInfo = CryptoSwift;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C287612F1DB3AA0E00AB0953 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C28761601DB3ADCB00AB0953 /* CryptoSwift.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C28760FA1DB3A5B500AB0953 /* AESiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AESiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,6 +76,8 @@
 		C28761121DB3A5B500AB0953 /* AESiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AESiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C28761171DB3A5B500AB0953 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C28761181DB3A5B500AB0953 /* AESiOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AESiOSTests.swift; sourceTree = "<group>"; };
+		C28761531DB3ADB100AB0953 /* CryptoSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CryptoSwift.xcodeproj; path = "../../iOS-frameworks/CryptoSwift/CryptoSwift-swift12/CryptoSwift.xcodeproj"; sourceTree = "<group>"; };
+		C28761631DB3BA3900AB0953 /* AES2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AES2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C287615F1DB3ADC600AB0953 /* CryptoSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +102,7 @@
 		C28760F11DB3A5B500AB0953 = {
 			isa = PBXGroup;
 			children = (
+				C28761531DB3ADB100AB0953 /* CryptoSwift.xcodeproj */,
 				C28760FC1DB3A5B500AB0953 /* AESiOS */,
 				C28761151DB3A5B500AB0953 /* AESiOSTests */,
 				C28760FB1DB3A5B500AB0953 /* Products */,
@@ -86,6 +128,7 @@
 				C287610B1DB3A5B500AB0953 /* LaunchScreen.xib */,
 				C28761011DB3A5B500AB0953 /* AESiOS.xcdatamodeld */,
 				C28760FD1DB3A5B500AB0953 /* Supporting Files */,
+				C28761631DB3BA3900AB0953 /* AES2.swift */,
 			);
 			path = AESiOS;
 			sourceTree = "<group>";
@@ -115,6 +158,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		C28761541DB3ADB100AB0953 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C287615A1DB3ADB100AB0953 /* CryptoSwift.framework */,
+				C287615C1DB3ADB100AB0953 /* CryptoSwiftTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -125,10 +177,12 @@
 				C28760F61DB3A5B500AB0953 /* Sources */,
 				C28760F71DB3A5B500AB0953 /* Frameworks */,
 				C28760F81DB3A5B500AB0953 /* Resources */,
+				C287612F1DB3AA0E00AB0953 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C287615E1DB3ADBF00AB0953 /* PBXTargetDependency */,
 			);
 			name = AESiOS;
 			productName = AESiOS;
@@ -182,6 +236,12 @@
 			mainGroup = C28760F11DB3A5B500AB0953;
 			productRefGroup = C28760FB1DB3A5B500AB0953 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = C28761541DB3ADB100AB0953 /* Products */;
+					ProjectRef = C28761531DB3ADB100AB0953 /* CryptoSwift.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				C28760F91DB3A5B500AB0953 /* AESiOS */,
@@ -189,6 +249,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		C287615A1DB3ADB100AB0953 /* CryptoSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CryptoSwift.framework;
+			remoteRef = C28761591DB3ADB100AB0953 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C287615C1DB3ADB100AB0953 /* CryptoSwiftTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = CryptoSwiftTests.xctest;
+			remoteRef = C287615B1DB3ADB100AB0953 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		C28760F81DB3A5B500AB0953 /* Resources */ = {
@@ -215,6 +292,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C28761641DB3BA3900AB0953 /* AES2.swift in Sources */,
 				C28761051DB3A5B500AB0953 /* ViewController.swift in Sources */,
 				C28761001DB3A5B500AB0953 /* AppDelegate.swift in Sources */,
 				C28761031DB3A5B500AB0953 /* AESiOS.xcdatamodeld in Sources */,
@@ -236,6 +314,11 @@
 			isa = PBXTargetDependency;
 			target = C28760F91DB3A5B500AB0953 /* AESiOS */;
 			targetProxy = C28761131DB3A5B500AB0953 /* PBXContainerItemProxy */;
+		};
+		C287615E1DB3ADBF00AB0953 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CryptoSwift;
+			targetProxy = C287615D1DB3ADBF00AB0953 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -413,6 +496,7 @@
 				C287611E1DB3A5B500AB0953 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C287611F1DB3A5B500AB0953 /* Build configuration list for PBXNativeTarget "AESiOSTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +505,7 @@
 				C28761211DB3A5B500AB0953 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
